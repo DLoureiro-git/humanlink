@@ -10,7 +10,6 @@ export async function GET() {
     const { data: skills, error } = await supabaseAdmin
       .from('skills')
       .select('*')
-      .eq('published', true)
       .order('name', { ascending: true });
 
     if (error) {
