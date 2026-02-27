@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
         const { error } = await supabaseAdmin.from('licenses').insert({
           license_key: licenseKey,
           email,
-          personality,
+          personality_choice: personality,
           status: 'active',
           lemonsqueezy_subscription_id: event.data.id,
           created_at: new Date().toISOString(),

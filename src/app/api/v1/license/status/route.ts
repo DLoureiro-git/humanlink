@@ -26,16 +26,10 @@ export async function GET(request: NextRequest) {
       return corsErrorResponse('License not found', 404);
     }
 
-    // Fetch features
-    const { data: features } = await supabaseAdmin
-      .from('license_features')
-      .select('feature')
-      .eq('license_id', license.id);
-
     return corsResponse({
       license_key: license.license_key,
       status: license.status,
-      personality: license.personality || 'default',
+      personality: license.personality_choice || 'nova',
       email: license.email,
       device_fingerprint: license.device_fingerprint,
       device_name: license.device_name,
@@ -43,7 +37,6 @@ export async function GET(request: NextRequest) {
       activated_at: license.activated_at,
       last_heartbeat: license.last_heartbeat,
       created_at: license.created_at,
-      features: features?.map((f: { feature: string }) => f.feature) || [],
     });
   } catch (error) {
     console.error('License status error:', error);

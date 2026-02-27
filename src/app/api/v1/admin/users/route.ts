@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
       .insert({
         license_key: licenseKey,
         email,
-        personality: personality || 'default',
+        personality_choice: personality || 'nova',
         status: 'active',
         created_at: new Date().toISOString(),
       })

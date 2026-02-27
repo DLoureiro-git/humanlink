@@ -66,16 +66,9 @@ export async function POST(request: NextRequest) {
       return corsErrorResponse('Failed to activate license', 500);
     }
 
-    // Fetch features for this license
-    const { data: features } = await supabaseAdmin
-      .from('license_features')
-      .select('feature')
-      .eq('license_id', license.id);
-
     return corsResponse({
       valid: true,
-      personality: license.personality || 'default',
-      features: features?.map((f: { feature: string }) => f.feature) || [],
+      personality: license.personality_choice || 'nova',
     });
   } catch (error) {
     console.error('License activation error:', error);

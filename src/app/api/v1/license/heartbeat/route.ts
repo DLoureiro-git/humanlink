@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
     return corsResponse({
       valid: true,
       status: license.status,
-      personality: license.personality || 'default',
+      personality: license.personality_choice || 'nova',
     });
   } catch (error) {
     console.error('Heartbeat error:', error);
