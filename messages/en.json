@@ -180,7 +180,15 @@
     "login_link": "Sign in here",
     "error_invalid": "Invalid email or password.",
     "error_exists": "An account with this email already exists.",
-    "error_signup": "Error creating account. Please try again."
+    "error_signup": "Error creating account. Please try again.",
+    "forgot_password": "Forgot your password?",
+    "forgot_title": "Reset password",
+    "forgot_subtitle": "Enter your email to receive a recovery link.",
+    "reset_button": "Send link",
+    "reset_sent_title": "Email sent",
+    "reset_sent_desc": "Check your inbox for the recovery link.",
+    "back_to_login": "Back to sign in",
+    "error_reset": "Error sending email. Please try again."
   },
   "dashboard": {
     "title": "Dashboard",
@@ -284,6 +292,7 @@
     "users_title": "Users",
     "create_user": "Create license",
     "enter_email": "User email:",
+    "search_placeholder": "Search by email, license, status...",
     "no_users": "No users found.",
     "col_email": "Email",
     "col_key": "License",

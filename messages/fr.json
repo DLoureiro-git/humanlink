@@ -180,7 +180,15 @@
     "login_link": "Connecte-toi ici",
     "error_invalid": "Email ou mot de passe incorrect.",
     "error_exists": "Un compte avec cet email existe déjà.",
-    "error_signup": "Erreur lors de la création du compte. Réessaie."
+    "error_signup": "Erreur lors de la création du compte. Réessaie.",
+    "forgot_password": "Mot de passe oublié ?",
+    "forgot_title": "Récupérer le mot de passe",
+    "forgot_subtitle": "Entre ton email pour recevoir le lien de récupération.",
+    "reset_button": "Envoyer le lien",
+    "reset_sent_title": "Email envoyé",
+    "reset_sent_desc": "Vérifie ta boîte de réception pour le lien de récupération.",
+    "back_to_login": "Retour à la connexion",
+    "error_reset": "Erreur lors de l'envoi de l'email. Réessaie."
   },
   "dashboard": {
     "title": "Dashboard",
@@ -284,6 +292,7 @@
     "users_title": "Utilisateurs",
     "create_user": "Créer une licence",
     "enter_email": "Email de l'utilisateur :",
+    "search_placeholder": "Rechercher par email, licence, statut...",
     "no_users": "Aucun utilisateur trouvé.",
     "col_email": "Email",
     "col_key": "Licence",
