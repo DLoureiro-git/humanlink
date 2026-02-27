@@ -50,7 +50,7 @@ export default function Pricing() {
               <div className="flex justify-center mb-8">
                 <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-accent-purple/15 border border-accent-purple/30 text-accent-purple text-sm font-medium">
                   <Sparkles className="w-3.5 h-3.5" />
-                  Recomendado
+                  {t('badge')}
                 </span>
               </div>
 
@@ -109,6 +109,11 @@ export default function Pricing() {
               {/* Disclaimer */}
               <p className="text-center text-white/40 text-sm mt-5 font-body">
                 {t('disclaimer')}
+              </p>
+
+              {/* API key note */}
+              <p className="text-center text-white/30 text-xs mt-3 font-body leading-relaxed max-w-sm mx-auto">
+                {t('api_note')}
               </p>
             </div>
           </div>

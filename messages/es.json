@@ -91,41 +91,106 @@
     },
     "videoPlaceholder": "Ver demostración"
   },
+  "useCases": {
+    "title": "HumanLink encaja en tu vida.",
+    "subtitle": "Sea cual sea tu día a día, HumanLink se adapta.",
+    "tabs": {
+      "student": {
+        "label": "Estudiante",
+        "items": [
+          { "title": "Resumen de materia", "description": "Apunta la cámara al libro y recibe un resumen instantáneo." },
+          { "title": "Ayuda en trabajos", "description": "Investiga, organiza fuentes y te ayuda a escribir sin hacerlo por ti." },
+          { "title": "Plan de estudio", "description": "Crea horarios de estudio adaptados a tu ritmo y exámenes." },
+          { "title": "Resolver dudas", "description": "Explica conceptos difíciles como un compañero que entiende todo." }
+        ]
+      },
+      "freelancer": {
+        "label": "Freelancer",
+        "items": [
+          { "title": "Gestión de clientes", "description": "Organiza contactos, deadlines y follow-ups sin olvidar nada." },
+          { "title": "Respuestas automáticas", "description": "Responde emails y mensajes con tu tono mientras trabajas." },
+          { "title": "Investigación de mercado", "description": "Analiza competencia y encuentra oportunidades sin horas en Google." },
+          { "title": "Facturación y admin", "description": "Te recuerda facturas pendientes y organiza el papeleo." }
+        ]
+      },
+      "entrepreneur": {
+        "label": "Emprendedor",
+        "items": [
+          { "title": "Análisis de datos", "description": "Resume informes largos en 3 puntos clave." },
+          { "title": "Atención 24/7", "description": "Responde a tus clientes en WhatsApp incluso cuando no estás." },
+          { "title": "Automatización de tareas", "description": "¿Tareas repetitivas en el PC? Enséñale una vez, lo hace siempre." },
+          { "title": "Brainstorming", "description": "Genera ideas para campañas, nombres, estrategias — al instante." }
+        ]
+      },
+      "creator": {
+        "label": "Creador de Contenido",
+        "items": [
+          { "title": "Ideas para posts", "description": "Sugiere temas, hooks y formatos basados en tus redes." },
+          { "title": "Investigación de tendencias", "description": "Navega, analiza y resume lo que está en tendencia." },
+          { "title": "Escritura asistida", "description": "Ayuda a escribir captions, guiones y newsletters." },
+          { "title": "Organización de proyectos", "description": "Mantiene seguimiento de todos tus proyectos creativos." }
+        ]
+      },
+      "enterprise": {
+        "label": "Empresa",
+        "items": [
+          { "title": "Atención al cliente", "description": "Bot inteligente en WhatsApp que resuelve el 80% de las preguntas." },
+          { "title": "Onboarding de empleados", "description": "Responde dudas de RRHH, TI y procesos internos." },
+          { "title": "Soporte técnico", "description": "Diagnóstico guiado y escalamiento a humanos cuando es necesario." },
+          { "title": "Agendamiento", "description": "Programa reuniones, citas y compromisos por chat." }
+        ]
+      }
+    }
+  },
   "testimonials": {
     "items": [
       {
-        "quote": "Después de instalarlo, no puedo volver atrás.",
+        "quote": "Después de instalarlo, no puedo volver atrás. Atlas me organiza el día mejor que yo mismo.",
         "name": "Juan",
         "role": "freelancer",
-        "badge": "beta tester"
+        "badge": "early adopter",
+        "personality": "atlas"
       },
       {
-        "quote": "Es la primera IA que siento que es mía.",
+        "quote": "Es la primera IA que siento que es mía. Nova me habla como una amiga.",
         "name": "Marta",
         "role": "estudiante",
-        "badge": "beta tester"
+        "badge": "early adopter",
+        "personality": "nova"
       },
       {
-        "quote": "Por fin mi PC hace lo que quiero sin tener que explicar todo.",
+        "quote": "Por fin mi PC hace lo que quiero sin tener que explicar todo. Me ahorra 2 horas al día.",
         "name": "Ricardo",
         "role": "emprendedor",
-        "badge": "beta tester"
+        "badge": "early adopter",
+        "personality": "atlas"
+      },
+      {
+        "quote": "Spark me dio 3 ideas de campañas en 5 minutos. Una de ellas fue la mejor que he hecho.",
+        "name": "Ana",
+        "role": "creadora de contenido",
+        "badge": "early adopter",
+        "personality": "spark"
       }
     ]
   },
   "pricing": {
     "title": "Simple y transparente",
+    "badge": "Recomendado",
     "price": "9,99€",
     "period": "/mes",
     "includes": [
       "Instalación en 2 minutos",
-      "4 personalidades a elegir",
-      "Actualizaciones automáticas",
-      "Privacidad total",
-      "Nuevas capacidades cada mes"
+      "4 personalidades a elegir (Atlas, Nova, Spark, Sage)",
+      "Actualizaciones automáticas de funcionalidades",
+      "Privacidad total — datos en tu ordenador",
+      "Nuevas capacidades cada mes",
+      "Soporte incluido",
+      "Funciona con cualquier IA (ChatGPT, Claude, Gemini, modelos locales)"
     ],
     "cta": "Empezar ahora",
-    "disclaimer": "Cancela en cualquier momento. Sin compromiso."
+    "disclaimer": "Cancela en cualquier momento. Sin compromiso.",
+    "api_note": "HumanLink es la plataforma. La IA va por tu cuenta — usas tu propia clave API. Así controlas los costes y eliges el modelo que prefieras."
   },
   "faq": {
     "title": "FAQ",
@@ -135,20 +200,32 @@
         "answer": "No. Si sabes usar un smartphone, sabes usar HumanLink."
       },
       {
+        "question": "¿Qué es una clave API?",
+        "answer": "Es como una contraseña que conecta HumanLink al servicio de IA que elijas (ChatGPT, Claude, etc.). Te explicamos todo paso a paso durante la instalación."
+      },
+      {
         "question": "¿Funciona offline?",
-        "answer": "Siempre que sea posible, sí. HumanLink fue diseñado para funcionar sin internet."
+        "answer": "Siempre que sea posible, sí. La memoria, visión por cámara y control del ordenador funcionan sin internet. Para conversaciones con IA, necesitas conexión (a menos que uses un modelo local)."
       },
       {
         "question": "¿Es seguro?",
-        "answer": "HumanLink fue diseñado con la privacidad primero. Tus datos se quedan en tu ordenador."
+        "answer": "HumanLink fue diseñado con la privacidad primero. Tus datos se quedan en tu ordenador y nunca salen de tu máquina."
       },
       {
         "question": "¿Puedo cambiar de personalidad?",
-        "answer": "Sí, en cualquier momento en los ajustes."
+        "answer": "Sí, en cualquier momento en los ajustes. Puedes probar las 4 y ver cuál va mejor contigo."
       },
       {
         "question": "¿En qué ordenadores funciona?",
         "answer": "Windows 10+ y macOS 12+. Linux próximamente."
+      },
+      {
+        "question": "¿Qué es OpenClaw?",
+        "answer": "Es el motor open-source que alimenta HumanLink. Es tecnología transparente, usada por miles de desarrolladores, que empaquetamos en una experiencia simple y bonita para ti."
+      },
+      {
+        "question": "¿Cuánto cuesta la IA en sí?",
+        "answer": "Depende del uso y del proveedor que elijas. La mayoría de usuarios gastan entre 2€ y 10€/mes en IA. Te ayudamos a optimizar."
       },
       {
         "question": "¿Puedo cancelar?",
@@ -156,7 +233,62 @@
       }
     ]
   },
+  "comparison": {
+    "title": "Tu día con y sin HumanLink",
+    "without_label": "Sin HumanLink",
+    "with_label": "Con HumanLink",
+    "items": [
+      {
+        "without": "Pierdes 30 min buscando algo simple",
+        "with": "\"Busca esto\" — 30 segundos"
+      },
+      {
+        "without": "Olvidas tareas, enlaces e ideas importantes",
+        "with": "Él recuerda todo por ti"
+      },
+      {
+        "without": "Respondes manualmente cada mensaje",
+        "with": "Respuestas inteligentes automáticas"
+      },
+      {
+        "without": "Configuras todo tú solo (o pagas a alguien)",
+        "with": "Instala en 2 minutos, funciona al instante"
+      },
+      {
+        "without": "Datos repartidos en 10 apps diferentes",
+        "with": "Un asistente central que lo sabe todo"
+      },
+      {
+        "without": "¿Automatizaciones? Solo si sabes programar",
+        "with": "\"Haz esto todos los días a las 9h\" — hecho"
+      }
+    ],
+    "tagline": "Menos tiempo en el ordenador. Más tiempo en tu vida."
+  },
+  "poweredBy": {
+    "title": "Construido sobre tecnología abierta.",
+    "subtitle": "HumanLink funciona con OpenClaw — un motor de agentes autónomos open-source usado por miles de desarrolladores en todo el mundo.",
+    "points": [
+      {
+        "title": "Open-source",
+        "description": "Tecnología transparente y auditable. Sin cajas negras."
+      },
+      {
+        "title": "Comunidad global",
+        "description": "Miles de contribuidores mejorando el motor cada día."
+      },
+      {
+        "title": "Tú controlas",
+        "description": "El código es abierto. Tus datos son tuyos. Punto."
+      }
+    ],
+    "link": "Saber más sobre OpenClaw →"
+  },
   "footer": {
+    "description": "Inteligencia artificial con personalidad.",
+    "links": "Enlaces",
+    "language": "Idioma",
+    "powered_by": "Powered by OpenClaw",
     "privacy": "Privacidad",
     "terms": "Términos",
     "contact": "Contacto",

@@ -5,12 +5,20 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 const avatarColors = [
-  'from-accent-purple to-accent-violet',
-  'from-accent-blue to-accent-cyan',
-  'from-accent-green to-accent-amber',
+  'from-accent-blue to-accent-cyan',      // João (uses Atlas = blue)
+  'from-accent-green to-emerald-500',      // Marta (uses Nova = green)
+  'from-accent-purple to-accent-violet',   // Ricardo (uses Atlas/generic = purple)
+  'from-accent-violet to-pink-500',        // Ana (uses Spark = violet)
 ];
 
-const avatarInitials = ['J', 'M', 'R'];
+const avatarInitials = ['J', 'M', 'R', 'A'];
+
+const personalityColors: Record<string, string> = {
+  atlas: 'bg-accent-blue/15 border-accent-blue/30 text-accent-blue',
+  nova: 'bg-accent-green/15 border-accent-green/30 text-accent-green',
+  spark: 'bg-accent-violet/15 border-accent-violet/30 text-accent-violet',
+  sage: 'bg-accent-amber/15 border-accent-amber/30 text-accent-amber',
+};
 
 interface TestimonialCardProps {
   index: number;
@@ -18,9 +26,10 @@ interface TestimonialCardProps {
   name: string;
   role: string;
   badge: string;
+  personality: string;
 }
 
-function TestimonialCard({ index, quote, name, role, badge }: TestimonialCardProps) {
+function TestimonialCard({ index, quote, name, role, badge, personality }: TestimonialCardProps) {
   return (
     <motion.div
       className="group relative"
@@ -83,6 +92,9 @@ function TestimonialCard({ index, quote, name, role, badge }: TestimonialCardPro
               <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-accent-purple/10 border border-accent-purple/20 text-accent-purple text-[10px] font-body font-medium uppercase tracking-wider">
                 {badge}
               </span>
+              <span className={`inline-flex items-center px-2 py-0.5 rounded-full border text-[10px] font-body font-medium uppercase tracking-wider ${personalityColors[personality] ?? ''}`}>
+                {personality}
+              </span>
             </div>
             <span className="text-xs text-white/30 font-body capitalize mt-0.5 block">
               {role}
@@ -98,11 +110,12 @@ export default function Testimonials() {
   const t = useTranslations('testimonials');
 
   // Access the testimonials array from translations
-  const testimonials = [0, 1, 2].map((i) => ({
+  const testimonials = [0, 1, 2, 3].map((i) => ({
     quote: t(`items.${i}.quote`),
     name: t(`items.${i}.name`),
     role: t(`items.${i}.role`),
     badge: t(`items.${i}.badge`),
+    personality: t(`items.${i}.personality`),
   }));
 
   return (
@@ -123,7 +136,7 @@ export default function Testimonials() {
         >
           {/* Decorative dots */}
           <div className="flex items-center justify-center gap-1.5 mb-8">
-            {[0, 1, 2].map((i) => (
+            {[0, 1, 2, 3].map((i) => (
               <motion.div
                 key={i}
                 className="w-1 h-1 rounded-full bg-accent-purple/40"
@@ -141,7 +154,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {testimonials.map((item, i) => (
             <TestimonialCard
               key={i}
@@ -150,6 +163,7 @@ export default function Testimonials() {
               name={item.name}
               role={item.role}
               badge={item.badge}
+              personality={item.personality}
             />
           ))}
         </div>

@@ -34,14 +34,14 @@ export default function Footer() {
               HumanLink
             </span>
             <p className="mt-3 text-white/40 text-sm font-body leading-relaxed max-w-xs">
-              Inteligência artificial com personalidade.
+              {t('description')}
             </p>
           </div>
 
           {/* Navigation links */}
           <div className="md:col-span-3">
             <h4 className="font-heading text-sm font-semibold text-white/60 uppercase tracking-wider mb-4">
-              Links
+              {t('links')}
             </h4>
             <ul className="space-y-2.5">
               <li>
@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Language switcher */}
           <div className="md:col-span-3">
             <h4 className="font-heading text-sm font-semibold text-white/60 uppercase tracking-wider mb-4">
-              Idioma
+              {t('language')}
             </h4>
             <div className="flex flex-wrap gap-2">
               {locales.map(({ code, label }) => (
@@ -124,9 +124,19 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-center text-white/30 text-xs font-body">
-            {t('rights')}
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <a
+              href="https://github.com/openclaw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/20 text-xs font-body hover:text-white/40 transition-colors"
+            >
+              {t('powered_by')}
+            </a>
+            <p className="text-center text-white/30 text-xs font-body">
+              {t('rights')}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
