@@ -410,7 +410,8 @@
     "include_privacy": "Confidentialité totale",
     "include_new": "Nouvelles fonctionnalités chaque mois",
     "subscribe_btn": "S'abonner maintenant",
-    "coming_soon_note": "Paiements bientôt disponibles. Contacte-nous pour un accès anticipé.",
+    "success_message": "Paiement réussi ! Votre licence sera créée dans quelques instants.",
+    "manage_btn": "Gérer sur le portail client",
     "disclaimer": "Annule à tout moment. Sans engagement."
   },
   "admin": {

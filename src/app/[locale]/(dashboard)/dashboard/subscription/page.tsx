@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { createClient } from '@/lib/supabase-browser';
-import { Check, CreditCard, Sparkles, Loader2, ExternalLink } from 'lucide-react';
+import { Check, CreditCard, Sparkles, Loader2, ExternalLink, PartyPopper } from 'lucide-react';
 
 type License = {
   id: string;
@@ -22,6 +22,21 @@ export default function SubscriptionPage() {
   const supabase = createClient();
   const [license, setLicense] = useState<License | null>(null);
   const [loading, setLoading] = useState(true);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [portalLoading, setPortalLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    // Check for success redirect from LemonSqueezy
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      setShowSuccess(true);
+      // Clean URL
+      window.history.replaceState({}, '', window.location.pathname);
+      // Auto-dismiss after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000);
+    }
+  }, []);
 
   useEffect(() => {
     if (!user) return;
@@ -38,6 +53,37 @@ export default function SubscriptionPage() {
     };
     fetchLicense();
   }, [user]);
+
+  const handleSubscribe = async () => {
+    setCheckoutLoading(true);
+    try {
+      const response = await fetch('/api/v1/checkout', { method: 'POST' });
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        console.error('No checkout URL returned:', data);
+        setCheckoutLoading(false);
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      setCheckoutLoading(false);
+    }
+  };
+
+  const handleManageSubscription = async () => {
+    setPortalLoading(true);
+    try {
+      const response = await fetch('/api/v1/checkout/portal');
+      const data = await response.json();
+      if (data.url) {
+        window.open(data.url, '_blank');
+      }
+    } catch (error) {
+      console.error('Portal error:', error);
+    }
+    setPortalLoading(false);
+  };
 
   if (loading) {
     return (
@@ -59,6 +105,14 @@ export default function SubscriptionPage() {
     <div className="max-w-2xl">
       <h1 className="mb-2 font-heading text-2xl font-bold text-white">{t('title')}</h1>
       <p className="mb-10 font-body text-white/50">{t('subtitle')}</p>
+
+      {/* Success banner after checkout */}
+      {showSuccess && (
+        <div className="mb-6 flex items-center gap-3 rounded-2xl border border-green-500/20 bg-green-500/[0.05] p-4">
+          <PartyPopper className="h-5 w-5 text-green-400" />
+          <p className="font-body text-sm text-green-400">{t('success_message')}</p>
+        </div>
+      )}
 
       {license ? (
         /* Active subscription */
@@ -98,7 +152,19 @@ export default function SubscriptionPage() {
 
           <div className="rounded-2xl border border-white/[0.06] bg-surface p-6">
             <h3 className="mb-4 font-heading text-sm font-medium text-white/50">{t('manage')}</h3>
-            <p className="font-body text-sm text-white/40">{t('manage_desc')}</p>
+            <p className="mb-4 font-body text-sm text-white/40">{t('manage_desc')}</p>
+            <button
+              onClick={handleManageSubscription}
+              disabled={portalLoading}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 font-body text-sm text-white/70 transition-colors hover:bg-white/[0.08] disabled:opacity-50"
+            >
+              {portalLoading ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <ExternalLink className="h-4 w-4" />
+              )}
+              {t('manage_btn')}
+            </button>
           </div>
         </div>
       ) : (
@@ -132,13 +198,20 @@ export default function SubscriptionPage() {
               </ul>
 
               <button
-                disabled
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent-purple px-6 py-4 font-heading text-base font-semibold text-white opacity-80 transition-colors"
+                onClick={handleSubscribe}
+                disabled={checkoutLoading}
+                className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl py-4 font-heading text-base font-semibold text-white transition-all duration-300 hover:shadow-[0_0_40px_rgba(124,58,237,0.3)] disabled:opacity-50"
               >
-                <CreditCard className="h-5 w-5" />
-                {t('subscribe_btn')}
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-purple to-accent-violet transition-all duration-300 group-hover:from-accent-violet group-hover:to-accent-purple" />
+                <span className="relative z-10 flex items-center gap-2">
+                  {checkoutLoading ? (
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                  ) : (
+                    <CreditCard className="h-5 w-5" />
+                  )}
+                  {t('subscribe_btn')}
+                </span>
               </button>
-              <p className="mt-3 text-center font-body text-xs text-white/30">{t('coming_soon_note')}</p>
             </div>
           </div>
 

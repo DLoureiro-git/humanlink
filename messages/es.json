@@ -410,7 +410,8 @@
     "include_privacy": "Privacidad total",
     "include_new": "Nuevas capacidades cada mes",
     "subscribe_btn": "Suscribirse ahora",
-    "coming_soon_note": "Pagos próximamente. Contáctanos para acceso anticipado.",
+    "success_message": "¡Pago realizado con éxito! Tu licencia se creará en instantes.",
+    "manage_btn": "Gestionar en portal del cliente",
     "disclaimer": "Cancela en cualquier momento. Sin compromiso."
   },
   "admin": {

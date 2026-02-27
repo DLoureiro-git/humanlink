@@ -33,6 +33,8 @@ interface LemonSqueezyAttributes {
   product_name?: string;
   status?: string;
   ends_at?: string;
+  urls?: Record<string, string>;
+  customer_id?: number;
   [key: string]: unknown;
 }
 
@@ -107,6 +109,23 @@ export async function POST(request: NextRequest) {
         if (error) {
           console.error('Failed to create license from webhook:', error);
           return corsErrorResponse('Failed to create license', 500);
+        }
+
+        // Link to user account if custom data provided
+        const userId = event.meta.custom_data?.user_id as string | undefined;
+        if (userId && !error) {
+          await supabaseAdmin.from('licenses').update({ user_id: userId }).eq('license_key', licenseKey);
+        }
+
+        // Store customer portal URL if available
+        const urls = attributes.urls as Record<string, string> | undefined;
+        if (urls?.customer_portal && !error) {
+          await supabaseAdmin.from('licenses')
+            .update({
+              customer_portal_url: urls.customer_portal,
+              lemonsqueezy_customer_id: String(event.data.attributes.customer_id || ''),
+            })
+            .eq('license_key', licenseKey);
         }
 
         console.log(`[LemonSqueezy] License created for ${email}: ${licenseKey}`);

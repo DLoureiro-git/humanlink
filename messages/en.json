@@ -410,7 +410,8 @@
     "include_privacy": "Total privacy",
     "include_new": "New capabilities every month",
     "subscribe_btn": "Subscribe now",
-    "coming_soon_note": "Payments coming soon. Contact us for early access.",
+    "success_message": "Payment successful! Your license will be created shortly.",
+    "manage_btn": "Manage in customer portal",
     "disclaimer": "Cancel anytime. No commitment."
   },
   "admin": {
