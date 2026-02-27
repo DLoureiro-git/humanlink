@@ -20,13 +20,17 @@ export default function SignupPage() {
     setError('');
     setLoading(true);
 
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
+    // Step 1: Create user via server-side API (auto-confirms email)
+    const signupRes = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
     });
 
-    if (error) {
-      if (error.code === 'user_already_exists') {
+    const signupData = await signupRes.json();
+
+    if (!signupRes.ok) {
+      if (signupRes.status === 409 || signupData.error === 'user_already_exists') {
         setError(t('error_exists'));
       } else {
         setError(t('error_signup'));
@@ -35,7 +39,13 @@ export default function SignupPage() {
       return;
     }
 
-    if (!data.session) {
+    // Step 2: Sign in immediately (user is auto-confirmed)
+    const { error: loginError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (loginError) {
       setError(t('error_signup'));
       setLoading(false);
       return;
