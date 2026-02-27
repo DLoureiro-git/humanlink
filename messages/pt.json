@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "title": "HumanLink — O teu computador, finalmente do teu lado.",
+    "description": "O HumanLink transforma o teu PC num assistente que vê, ouve, aprende e faz coisas por ti."
+  },
+  "nav": {
+    "features": "Funcionalidades",
+    "personalities": "Personalidades",
+    "pricing": "Preço",
+    "faq": "FAQ",
+    "cta": "Experimentar HumanLink"
+  },
+  "hero": {
+    "headline": "O teu computador, finalmente do teu lado.",
+    "subheadline": "O HumanLink transforma o teu PC num assistente que vê, ouve, aprende e faz coisas por ti.",
+    "cta_primary": "Experimentar HumanLink",
+    "cta_secondary": "Ver como funciona",
+    "badge": "Instala em 2 minutos"
+  },
+  "whatIsIt": {
+    "title": "Não é mais uma app. É uma nova forma de usar o computador.",
+    "description": "O HumanLink liga-te diretamente ao teu computador. Ele pode ver o que tu vês, ouvir o que dizes e ajudar-te em tempo real. Sem configurações complicadas. Sem termos técnicos."
+  },
+  "personalities": {
+    "title": "Escolhe quem te acompanha.",
+    "subtitle": "O HumanLink adapta-se a ti. Escolhe a personalidade que combina contigo.",
+    "atlas": {
+      "tagline": "Foco. Eficiência. Resultados.",
+      "description": "Direto ao ponto. Organiza a tua vida profissional, prioriza tarefas e nunca te deixa esquecer o que importa.",
+      "example": "Atlas, agenda uma reunião com o João para amanhã às 10h e prepara os pontos da última call."
+    },
+    "nova": {
+      "tagline": "Descontraído. Natural. Sempre presente.",
+      "description": "Como falar com um amigo que sabe de tudo. Relaxado, divertido e sempre pronto a ajudar sem pressão.",
+      "example": "Nova, encontra-me um bom restaurante italiano aqui perto e vê se tem boas reviews."
+    },
+    "spark": {
+      "tagline": "Inspiração. Ousadia. Sem limites.",
+      "description": "Para quem pensa fora da caixa. Sugere ideias inesperadas, ajuda em projetos criativos e nunca dá respostas óbvias.",
+      "example": "Spark, preciso de um conceito visual para uma campanha de sustentabilidade — surpreende-me."
+    },
+    "sage": {
+      "tagline": "Guia. Motiva. Transforma.",
+      "description": "O teu mentor pessoal. Ensina, desafia e puxa por ti para seres melhor todos os dias.",
+      "example": "Sage, quero aprender Python em 3 meses — cria-me um plano realista e acompanha o meu progresso."
+    }
+  },
+  "features": {
+    "title": "Tudo o que precisas. Nada que não precises.",
+    "memory": {
+      "title": "Lembra-se por ti",
+      "description": "Nunca mais perdes ideias, links ou tarefas."
+    },
+    "voice": {
+      "title": "Fala naturalmente",
+      "description": "Pede coisas como se estivesses a falar com alguém."
+    },
+    "screen": {
+      "title": "Vê o que está no ecrã",
+      "description": "Ajuda-te enquanto trabalhas ou estudas."
+    },
+    "automation": {
+      "title": "Faz tarefas sozinho",
+      "description": "Menos cliques. Mais tempo livre."
+    },
+    "browse": {
+      "title": "Navega por ti",
+      "description": "Pesquisa, preenche formulários e encontra o que precisas."
+    },
+    "privacy": {
+      "title": "Privado por defeito",
+      "description": "Os teus dados ficam contigo. Sempre."
+    }
+  },
+  "wow": {
+    "title": "Parece ficção científica. Mas está no teu computador.",
+    "description": "O HumanLink aprende contigo todos os dias. Quanto mais usas, mais útil fica. Como um assistente que nunca se esquece de nada."
+  },
+  "demo": {
+    "step1": {
+      "title": "Instala em 2 minutos",
+      "description": "Faz download, instala e está pronto."
+    },
+    "step2": {
+      "title": "Escolhe a tua personalidade",
+      "description": "Atlas, Nova, Spark ou Sage — tu decides."
+    },
+    "step3": {
+      "title": "Começa a usar",
+      "description": "Fala, escreve ou mostra — o HumanLink entende."
+    },
+    "videoPlaceholder": "Ver demonstração"
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Depois de instalar, não consigo voltar atrás.",
+        "name": "João",
+        "role": "freelancer",
+        "badge": "beta tester"
+      },
+      {
+        "quote": "É a primeira IA que sinto que é minha.",
+        "name": "Marta",
+        "role": "estudante",
+        "badge": "beta tester"
+      },
+      {
+        "quote": "Finalmente o meu PC faz o que eu quero sem eu ter de explicar tudo.",
+        "name": "Ricardo",
+        "role": "empreendedor",
+        "badge": "beta tester"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simples e transparente",
+    "price": "9,99€",
+    "period": "/mês",
+    "includes": [
+      "Instalação em 2 minutos",
+      "4 personalidades à escolha",
+      "Atualizações automáticas",
+      "Privacidade total",
+      "Novas capacidades todos os meses"
+    ],
+    "cta": "Começar agora",
+    "disclaimer": "Cancela a qualquer momento. Sem compromisso."
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "Preciso perceber de IA?",
+        "answer": "Não. Se sabes usar um smartphone, sabes usar HumanLink."
+      },
+      {
+        "question": "Funciona offline?",
+        "answer": "Sempre que possível, sim. O HumanLink foi desenhado para funcionar sem internet."
+      },
+      {
+        "question": "É seguro?",
+        "answer": "O HumanLink foi desenhado com privacidade em primeiro lugar. Os teus dados ficam no teu computador."
+      },
+      {
+        "question": "Posso mudar de personalidade?",
+        "answer": "Sim, a qualquer momento nas definições."
+      },
+      {
+        "question": "Em que computadores funciona?",
+        "answer": "Windows 10+ e macOS 12+. Linux em breve."
+      },
+      {
+        "question": "Posso cancelar?",
+        "answer": "A qualquer momento. Sem perguntas."
+      }
+    ]
+  },
+  "footer": {
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "contact": "Contacto",
+    "faq": "FAQ",
+    "rights": "© 2026 HumanLink. Todos os direitos reservados."
+  }
+}

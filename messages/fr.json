@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "title": "HumanLink — Ton ordinateur, enfin de ton côté.",
+    "description": "HumanLink transforme ton PC en assistant qui voit, écoute, apprend et fait les choses pour toi."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "personalities": "Personnalités",
+    "pricing": "Prix",
+    "faq": "FAQ",
+    "cta": "Essayer HumanLink"
+  },
+  "hero": {
+    "headline": "Ton ordinateur, enfin de ton côté.",
+    "subheadline": "HumanLink transforme ton PC en assistant qui voit, écoute, apprend et fait les choses pour toi.",
+    "cta_primary": "Essayer HumanLink",
+    "cta_secondary": "Voir comment ça marche",
+    "badge": "Installation en 2 minutes"
+  },
+  "whatIsIt": {
+    "title": "Pas une app de plus. Une nouvelle façon d'utiliser ton ordinateur.",
+    "description": "HumanLink te connecte directement à ton ordinateur. Il peut voir ce que tu vois, entendre ce que tu dis et t'aider en temps réel. Sans configurations compliquées. Sans jargon technique."
+  },
+  "personalities": {
+    "title": "Choisis qui t'accompagne.",
+    "subtitle": "HumanLink s'adapte à toi. Choisis la personnalité qui te correspond.",
+    "atlas": {
+      "tagline": "Focus. Efficacité. Résultats.",
+      "description": "Droit au but. Organise ta vie professionnelle, priorise les tâches et ne te laisse jamais oublier ce qui compte.",
+      "example": "Atlas, programme une réunion avec Jean pour demain à 10h et prépare les points du dernier appel."
+    },
+    "nova": {
+      "tagline": "Décontracté. Naturel. Toujours là.",
+      "description": "Comme parler à un ami qui sait tout. Décontracté, amusant et toujours prêt à aider sans pression.",
+      "example": "Nova, trouve-moi un bon restaurant italien près d'ici et vérifie les avis."
+    },
+    "spark": {
+      "tagline": "Inspiration. Audace. Sans limites.",
+      "description": "Pour ceux qui pensent différemment. Suggère des idées inattendues, aide dans les projets créatifs et ne donne jamais de réponses évidentes.",
+      "example": "Spark, j'ai besoin d'un concept visuel pour une campagne de développement durable — surprends-moi."
+    },
+    "sage": {
+      "tagline": "Guide. Motive. Transforme.",
+      "description": "Ton mentor personnel. Enseigne, défie et te pousse à être meilleur chaque jour.",
+      "example": "Sage, je veux apprendre Python en 3 mois — crée-moi un plan réaliste et suis mes progrès."
+    }
+  },
+  "features": {
+    "title": "Tout ce dont tu as besoin. Rien de superflu.",
+    "memory": {
+      "title": "Se souvient pour toi",
+      "description": "Ne perds plus jamais d'idées, de liens ou de tâches."
+    },
+    "voice": {
+      "title": "Parle naturellement",
+      "description": "Demande les choses comme si tu parlais à quelqu'un."
+    },
+    "screen": {
+      "title": "Voit ton écran",
+      "description": "T'aide pendant que tu travailles ou étudies."
+    },
+    "automation": {
+      "title": "Fait les tâches tout seul",
+      "description": "Moins de clics. Plus de temps libre."
+    },
+    "browse": {
+      "title": "Navigue pour toi",
+      "description": "Recherche, remplit les formulaires et trouve ce dont tu as besoin."
+    },
+    "privacy": {
+      "title": "Privé par défaut",
+      "description": "Tes données restent avec toi. Toujours."
+    }
+  },
+  "wow": {
+    "title": "On dirait de la science-fiction. Mais c'est sur ton ordinateur.",
+    "description": "HumanLink apprend avec toi chaque jour. Plus tu l'utilises, plus il devient utile. Comme un assistant qui n'oublie jamais rien."
+  },
+  "demo": {
+    "step1": {
+      "title": "Installation en 2 minutes",
+      "description": "Télécharge, installe et c'est prêt."
+    },
+    "step2": {
+      "title": "Choisis ta personnalité",
+      "description": "Atlas, Nova, Spark ou Sage — tu décides."
+    },
+    "step3": {
+      "title": "Commence à utiliser",
+      "description": "Parle, écris ou montre — HumanLink comprend."
+    },
+    "videoPlaceholder": "Voir la démo"
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Après l'avoir installé, je ne peux plus revenir en arrière.",
+        "name": "Jean",
+        "role": "freelance",
+        "badge": "bêta testeur"
+      },
+      {
+        "quote": "C'est la première IA qui me semble vraiment à moi.",
+        "name": "Marie",
+        "role": "étudiante",
+        "badge": "bêta testeur"
+      },
+      {
+        "quote": "Enfin mon PC fait ce que je veux sans que j'aie à tout expliquer.",
+        "name": "Richard",
+        "role": "entrepreneur",
+        "badge": "bêta testeur"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple et transparent",
+    "price": "9,99€",
+    "period": "/mois",
+    "includes": [
+      "Installation en 2 minutes",
+      "4 personnalités au choix",
+      "Mises à jour automatiques",
+      "Confidentialité totale",
+      "Nouvelles fonctionnalités chaque mois"
+    ],
+    "cta": "Commencer maintenant",
+    "disclaimer": "Annule à tout moment. Sans engagement."
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "Dois-je comprendre l'IA ?",
+        "answer": "Non. Si tu sais utiliser un smartphone, tu sais utiliser HumanLink."
+      },
+      {
+        "question": "Ça fonctionne hors ligne ?",
+        "answer": "Autant que possible, oui. HumanLink a été conçu pour fonctionner sans internet."
+      },
+      {
+        "question": "C'est sûr ?",
+        "answer": "HumanLink a été conçu avec la confidentialité d'abord. Tes données restent sur ton ordinateur."
+      },
+      {
+        "question": "Puis-je changer de personnalité ?",
+        "answer": "Oui, à tout moment dans les paramètres."
+      },
+      {
+        "question": "Sur quels ordinateurs ça fonctionne ?",
+        "answer": "Windows 10+ et macOS 12+. Linux bientôt."
+      },
+      {
+        "question": "Puis-je annuler ?",
+        "answer": "À tout moment. Sans questions."
+      }
+    ]
+  },
+  "footer": {
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "rights": "© 2026 HumanLink. Tous droits réservés."
+  }
+}
