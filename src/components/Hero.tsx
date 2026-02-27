@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Zap } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -122,8 +123,8 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           {/* Primary CTA */}
-          <button
-            onClick={() => handleScroll('#pricing')}
+          <Link
+            href="/signup"
             className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-7 py-3.5 font-body text-sm font-medium text-white transition-all duration-300 sm:px-8 sm:py-4 sm:text-base"
           >
             {/* Gradient background */}
@@ -134,7 +135,7 @@ export default function Hero() {
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             <span className="relative z-10">{t('cta_primary')}</span>
             <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </button>
+          </Link>
 
           {/* Secondary CTA */}
           <button

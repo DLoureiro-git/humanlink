@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Check, Sparkles } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export default function Pricing() {
   const t = useTranslations('pricing');
@@ -94,8 +95,8 @@ export default function Pricing() {
               </ul>
 
               {/* CTA button */}
-              <a
-                href="#"
+              <Link
+                href="/signup"
                 className="group/btn relative block w-full text-center py-4 px-8 rounded-xl font-heading font-semibold text-lg text-white overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(124,58,237,0.3)]"
               >
                 {/* Button gradient background */}
@@ -103,7 +104,7 @@ export default function Pricing() {
                 {/* Button shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-700" />
                 <span className="relative z-10">{t('cta')}</span>
-              </a>
+              </Link>
 
               {/* Disclaimer */}
               <p className="text-center text-white/40 text-sm mt-5 font-body">

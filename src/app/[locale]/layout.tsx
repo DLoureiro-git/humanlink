@@ -4,6 +4,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Outfit, DM_Sans} from 'next/font/google';
 import {routing} from '@/i18n/routing';
+import AuthProvider from '@/components/auth/AuthProvider';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -41,7 +42,9 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${outfit.variable} ${dmSans.variable}`}>
       <body className="bg-background text-white antialiased font-body">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <AuthProvider>
+            {children}
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

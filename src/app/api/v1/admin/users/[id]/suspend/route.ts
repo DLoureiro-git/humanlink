@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase';
-import { verifyAdminApiKey } from '@/lib/auth';
+import { verifyAdminAuth } from '@/lib/auth';
 import { corsResponse, corsErrorResponse, handleCorsOptions } from '@/lib/cors';
 
 export async function OPTIONS() {
@@ -12,7 +12,7 @@ export async function POST(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    if (!verifyAdminApiKey(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return corsErrorResponse('Unauthorized', 401);
     }
 
