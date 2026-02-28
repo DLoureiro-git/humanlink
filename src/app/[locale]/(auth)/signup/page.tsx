@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import { createClient } from '@/lib/supabase-browser';
 import { Link, useRouter } from '@/i18n/routing';
 import { Loader2 } from 'lucide-react';
@@ -10,7 +11,8 @@ export default function SignupPage() {
   const t = useTranslations('auth');
   const router = useRouter();
   const supabase = createClient();
-  const [email, setEmail] = useState('');
+  const searchParams = useSearchParams();
+  const [email, setEmail] = useState(searchParams.get('email') || '');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);

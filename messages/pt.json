@@ -15,7 +15,10 @@
     "subheadline": "O HumanLink transforma o teu PC num assistente que vê, ouve, aprende e faz coisas por ti.",
     "cta_primary": "Experimentar HumanLink",
     "cta_secondary": "Ver como funciona",
-    "badge": "Instala em 2 minutos"
+    "badge": "Instala em 2 minutos",
+    "email_placeholder": "O teu email",
+    "cta_start": "Começar",
+    "device_detected": "Dispositivo detetado"
   },
   "whatIsIt": {
     "title": "Não é mais uma app. É uma nova forma de usar o computador.",

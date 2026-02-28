@@ -19,9 +19,9 @@ export default function DownloadPage() {
       id: 'macos',
       name: 'macOS',
       icon: Apple,
-      version: t('coming_soon'),
+      version: 'v0.1.0 Beta',
       requirements: 'macOS 12+',
-      available: false,
+      available: true,
     },
   ];
 
@@ -50,7 +50,9 @@ export default function DownloadPage() {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-semibold text-white">{p.name}</h3>
-                <p className="font-body text-xs text-white/40">{p.requirements}</p>
+                <p className="font-body text-xs text-white/40">
+                  {p.available ? p.version : p.requirements}
+                </p>
               </div>
             </div>
 
