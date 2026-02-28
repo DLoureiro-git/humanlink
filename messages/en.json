@@ -18,7 +18,11 @@
     "badge": "Install in 2 minutes",
     "email_placeholder": "Your email",
     "cta_start": "Get started",
-    "device_detected": "Device detected"
+    "device_detected": "Device detected",
+    "use_whatsapp": "WhatsApp Assistant",
+    "use_social": "Manage Social Media",
+    "use_prospecting": "Prospect Clients",
+    "use_content": "Create Content with AI"
   },
   "whatIsIt": {
     "title": "Not just another app. A new way to use your computer.",

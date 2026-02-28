@@ -18,7 +18,11 @@
     "badge": "Instala em 2 minutos",
     "email_placeholder": "O teu email",
     "cta_start": "Começar",
-    "device_detected": "Dispositivo detetado"
+    "device_detected": "Dispositivo detetado",
+    "use_whatsapp": "Assistente WhatsApp",
+    "use_social": "Gerir Redes Sociais",
+    "use_prospecting": "Prospectar Clientes",
+    "use_content": "Criar Conteúdo com IA"
   },
   "whatIsIt": {
     "title": "Não é mais uma app. É uma nova forma de usar o computador.",

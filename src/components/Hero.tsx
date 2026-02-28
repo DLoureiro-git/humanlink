@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Zap, Apple, Monitor, Terminal } from 'lucide-react';
+import { ArrowRight, Play, Zap, Apple, Monitor, Terminal, MessageCircle, Share2, Mail, Sparkles } from 'lucide-react';
 import { useRouter } from '@/i18n/routing';
 
 function useDetectedOS() {
@@ -179,6 +179,46 @@ export default function Hero() {
               </span>
             </motion.div>
           )}
+
+          {/* 4 Use case icons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="mt-4 grid w-full max-w-lg grid-cols-2 gap-3 sm:grid-cols-4"
+          >
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 1.2 }}
+              className="group flex flex-col items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-accent-green/30 hover:bg-white/[0.05]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-green/10 transition-colors duration-300 group-hover:bg-accent-green/20">
+                <MessageCircle className="h-4 w-4 text-accent-green" />
+              </div>
+              <span className="text-center font-body text-[11px] font-medium leading-tight text-white/50 transition-colors duration-300 group-hover:text-white/70">{t('use_whatsapp')}</span>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 1.3 }}
+              className="group flex flex-col items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-accent-cyan/30 hover:bg-white/[0.05]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-cyan/10 transition-colors duration-300 group-hover:bg-accent-cyan/20">
+                <Share2 className="h-4 w-4 text-accent-cyan" />
+              </div>
+              <span className="text-center font-body text-[11px] font-medium leading-tight text-white/50 transition-colors duration-300 group-hover:text-white/70">{t('use_social')}</span>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 1.4 }}
+              className="group flex flex-col items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-accent-purple/30 hover:bg-white/[0.05]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-purple/10 transition-colors duration-300 group-hover:bg-accent-purple/20">
+                <Mail className="h-4 w-4 text-accent-purple" />
+              </div>
+              <span className="text-center font-body text-[11px] font-medium leading-tight text-white/50 transition-colors duration-300 group-hover:text-white/70">{t('use_prospecting')}</span>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 1.5 }}
+              className="group flex flex-col items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-accent-violet/30 hover:bg-white/[0.05]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-violet/10 transition-colors duration-300 group-hover:bg-accent-violet/20">
+                <Sparkles className="h-4 w-4 text-accent-violet" />
+              </div>
+              <span className="text-center font-body text-[11px] font-medium leading-tight text-white/50 transition-colors duration-300 group-hover:text-white/70">{t('use_content')}</span>
+            </motion.div>
+          </motion.div>
 
           {/* Secondary CTA */}
           <button
